@@ -45,7 +45,7 @@
               display: none;
               float: left;
               min-width: 80px;
-              padding: 5px 0;
+              padding: 4px 0;
               margin: 2px 0 0;
               list-style: none;
               font-size: 13px;
@@ -65,20 +65,32 @@
                 opacity: 1;
                 filter: alpha(opacity=1);
                 z-index: 0;
-                width: 100px;
+                width: 102px;
             }
-
+            .dropdown-menu > li {
+                height: 26px;
+            }
+            .dropdown-menu > li > a {
+              padding: 3px 3px;
+              -webkit-transition: background-color;
+              -o-transition: background-color;
+              transition: background-color;
+              -webkit-transition-duration: 300ms;
+              transition-duration: 300ms;
+              font-family: roboto;
+            }
             .btn-colors > .btn {
                 min-width: 112px;
             }
-            
+
             .btn-demo > .btn, .btn-group-demo > .btn-group {
                 margin: 0 5px 10px 0;
             }
+
             .btn-icon-local {
               border-radius: 50%;
-              width: 34px;
-              height: 34px;
+              width: 25px;
+              height: 25px;
               padding: 0;
               text-align: center;
               position: relative;
@@ -611,9 +623,10 @@
                 </div>
             </aside>
 
+            <div id='windows_div'></div>
 
             <section id="content">
-                <div class="container">
+                <div class="container" id="env_list">
                     <div class="card">
                         <div class="card-header">
                             <h2>Test ENV #2046</h2>
@@ -624,17 +637,17 @@
 
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Log Type</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CCP VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="0" href="#">CCP VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CELL VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="1" href="#">CELL VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UE 1 VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="2" href="#">UE 1 VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UE 2 VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="3" href="#">UE 2 VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">OAM VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="4" href="#">OAM VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">RAP</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="5" href="#">RAP</a></li>
                                     
                                 </ul>
                             </div>
@@ -642,19 +655,19 @@
                             <div class="dropdown-basic-demo clearfix">
                                 <ul class="dropdown-menu" role="menu">
 
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Journal Log</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700" >Journal Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="1"></button></li>
                                 </ul>
                             </div>
                             
@@ -664,17 +677,17 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">App Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="2"></button></li>
                                 </ul>
                             </div>
                             
@@ -684,17 +697,17 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">CP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="3"></button></li>
                                 </ul>
                             </div>
                             
@@ -703,17 +716,17 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">UP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="4"></button></li>
                                 </ul>
                             </div>
                             
@@ -723,17 +736,17 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Msg Seq</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="5"></button></li>
                                 </ul>
                             </div>
 
@@ -744,20 +757,19 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Status</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="6"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="6"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="6"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="6"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="6"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="6"></button></li>
                                 </ul>
                             </div>
-
 
 
 
@@ -824,9 +836,7 @@
                         </div>
                         <![endif]-->
 
-                        <div id='windows_div'></div>
-                        <input id='openall' type=button value='Open All' />
-                        <input id='closeall' type=button value='Close All'/>
+
                     </div>
                 </div>
             </section>

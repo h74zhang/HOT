@@ -7,107 +7,56 @@ var wingroup = new jsWindow.windowGroup($('#windows_div'), {
     keep_windows_on_page: { top: true, bottom: true, left: true, right: true }
 });
 
-var text_content = ""
-var WindowId = [];
+var text_content = ["","","","","",""];
+
+var WindowId = ["0","0","0","0","0","0"];
 var increment = 20;
 var win_top = 100;
 var win_left = 200;
-
-
-
-var ENV_2046_CCP_VM_Journal_id = 0;
-var ENV_2046_CELL_VM_Journal_id = 0;
-var ENV_2046_UE_VM_Journal_id = 0;
-var ENV_2046_OAM_VM_Journal_id = 0;
+var win_title = ["CCP VM","CELL VM","UE1 VM","UE2 VM","OAM","RAP"];
 
 $(document).ready(function() {
-    /*
-    $("#updateme").click( function() {
-        if(WindowId) {
-            new_line = "<p>abcdefghijklmn</p>"
-            wingroup.update_text(WindowId,new_line);
-        }
-    });
-    */
-    $("#ENV_2046_CCP_VM_Journal").click( function() {
-        if(ENV_2046_CCP_VM_Journal_id == 0) {
 
-            ENV_2046_CCP_VM_Journal_id = wingroup.appendWindow({
-                theme: "plain",
-                title: "Log: <b>CCP-VM</b>",
-                content: text_content,
-                top:win_top, left:win_left, width:500, height:300
-            });
-            WindowId.push(ENV_2046_CCP_VM_Journal_id);
+    $("#env_list").find(':button').on('click', function(){
+        var btn=$(this);
+        if(btn.hasClass("btn-success")) {
+            btn.removeClass("btn-success");
+            btn.addClass("btn-danger");
 
-        }else {
-            wingroup.remove_window(ENV_2046_CCP_VM_Journal_id);
-            ENV_2046_CCP_VM_Journal_id = 0;
-        }
-    });
-    $("#closeall").click( function() {
-        if (ENV_2046_CCP_VM_Journal_id != 0) {
-            wingroup.remove_window(ENV_2046_CCP_VM_Journal_id);
-            ENV_2046_CCP_VM_Journal_id = 0;
-        }
-        if (ENV_2046_CELL_VM_Journal_id != 0) {
-            wingroup.remove_window(ENV_2046_CELL_VM_Journal_id);
-            ENV_2046_CELL_VM_Journal_id = 0;
-        }
-        if (ENV_2046_UE_VM_Journal_id != 0) {
-            wingroup.remove_window(ENV_2046_UE_VM_Journal_id);
-            ENV_2046_UE_VM_Journal_id = 0;
-        }
-        if (ENV_2046_OAM_VM_Journal_id != 0) {
-            wingroup.remove_window(ENV_2046_OAM_VM_Journal_id);
-            ENV_2046_OAM_VM_Journal_id = 0;
-        }
-    });
-    $("#openall").click( function() {
-        if (ENV_2046_CCP_VM_Journal_id == 0) {
-            ENV_2046_CCP_VM_Journal_id = wingroup.appendWindow({
-                theme: "plain",
-                title: "Log: <b>CCP-VM</b>",
-                content: text_content,
-                top:100, left:100, width:500, height:300
-            });
-            WindowId.push(ENV_2046_CCP_VM_Journal_id);
-        }
-        if (ENV_2046_CELL_VM_Journal_id == 0) {
-            ENV_2046_CELL_VM_Journal_id = wingroup.appendWindow({
-                theme: "plain",
-                title: "Log: <b>CELL-VM</b>",
-                content: text_content,
-                top:100, left:620, width:500, height:300
-            });
-            WindowId.push(ENV_2046_CELL_VM_Journal_id);
-        }
-        if (ENV_2046_UE_VM_Journal_id == 0) {
-            ENV_2046_UE_VM_Journal_id = wingroup.appendWindow({
-                theme: "plain",
-                title: "Log: <b>UE-VM</b>",
-                content: text_content,
-                top:420, left:100, width:500, height:300
-            });
-            WindowId.push(ENV_2046_UE_VM_Journal_id);
-        }
-        if (ENV_2046_OAM_VM_Journal_id == 0) {
-            ENV_2046_OAM_VM_Journal_id = wingroup.appendWindow({
-                theme: "plain",
-                title: "Log: <b>OAM-VM</b>",
-                content: text_content,
-                top:420, left:620, width:500, height:300
-            });
-            WindowId.push(ENV_2046_OAM_VM_Journal_id);
-        }
-    });
+            if (btn.attr("col") == 1) {
+                var vm_id = btn.attr("tabindex");
 
+                var temp_id = wingroup.appendWindow({
+                    theme: "plain",
+                    title: "Log: <b>"+win_title[vm_id]+"</b>",
+                    content: text_content[vm_id],
+                    top:win_top, left:win_left, width:500, height:300
+                });
+                win_top += increment;
+                win_left += increment;
+                WindowId[vm_id] = temp_id;
+            };
+        } else {
+            btn.removeClass("btn-danger");
+            btn.addClass("btn-success");
+            if (btn.attr("col") == 1) {
+                var vm_id = btn.attr("tabindex");
+                var temp_id = WindowId[vm_id];
+
+                wingroup.remove_window(temp_id);
+                WindowId[vm_id] = "0";
+                text_content[vm_id] = "";
+            };
+        }
+    });
 
     setInterval(function() {
         WindowId.forEach(function(my_win_id) {
-            var now = new Date();
-            var new_line = "abcdefghijklmndfdfdfdfdfd  "+now.toISOString();
-            wingroup.update_text(my_win_id,new_line);
+            if(my_win_id != "0") {
+                var now = new Date();
+                var new_line = "abcdefghijklmndfdfdfdfdfd  "+now.toISOString();
+                wingroup.update_text(my_win_id,new_line); 
+            }
         });
     }, 500);
 });

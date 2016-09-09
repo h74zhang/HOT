@@ -177,7 +177,7 @@ jsWindow.windowGroup = function (container, additionalGroupSettings) {
         var objDiv = document.getElementById(win_id);
         if ((win) && (objDiv)) {
             var cont_cont = win.children(".window-content-container");
-            text_content = "<p>"+text_content+"</p>";
+            text_content = text_content+"</br>";
             cont_cont.children(".window-content").append(text_content);
 
             var tempid = "wincon"+win_id;
@@ -208,11 +208,6 @@ jsWindow.windowGroup = function (container, additionalGroupSettings) {
         } else {
             windows.splice(windows.indexOf(win_id), 1);
             $("#"+ win_id).remove();
-
-            var item_index = WindowId.indexOf(win_id); 
-            if (item_index >= 0) { 
-                WindowId.splice(item_index, 1); 
-            }
         }
     };
 
