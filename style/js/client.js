@@ -10,13 +10,13 @@ var wingroup = new jsWindow.windowGroup($('#windows_div'), {
 var text_content = ["","","","","",""];
 
 var WindowId = ["0","0","0","0","0","0"];
-var increment = 20;
-var win_top = 100;
-var win_left = 200;
+
+
 var win_title = ["CCP VM","CELL VM","UE1 VM","UE2 VM","OAM","RAP"];
+var win_top = [60,170,280,390,500,610];
+var win_left = 500;
 
 $(document).ready(function() {
-
     $("#env_list").find(':button').on('click', function(){
         var btn=$(this);
         if(btn.hasClass("btn-success")) {
@@ -30,10 +30,8 @@ $(document).ready(function() {
                     theme: "plain",
                     title: "Log: <b>"+win_title[vm_id]+"</b>",
                     content: text_content[vm_id],
-                    top:win_top, left:win_left, width:500, height:300
+                    top:win_top[vm_id], left:win_left, width:600, height:105
                 });
-                win_top += increment;
-                win_left += increment;
                 WindowId[vm_id] = temp_id;
             };
         } else {
@@ -49,6 +47,7 @@ $(document).ready(function() {
             };
         }
     });
+
 
     setInterval(function() {
         WindowId.forEach(function(my_win_id) {

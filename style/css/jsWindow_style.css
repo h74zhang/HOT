@@ -13,8 +13,8 @@
 .jswindow .window-top .close-window-button:active b{position:relative;top:1px;}
 .jswindow .window-content-container{min-height:20px;padding:5px;height:40%;overflow:auto;margin:2px;}
 .jswindow .window-content{height:99%;overflow: scroll;white-space: nowrap;}
-.jswindow .resize-window{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;float:right;cursor:move;position:relative;bottom:21px;right:0px;padding:0 3px 0 6px;}
-.jswindow.plain{background:#BBB;}.jswindow.plain .window-top p.window-title{background:#1e90ff;color:white;}
+.jswindow .resize-window{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;float:right;cursor:move;position:relative;bottom:5px;right:0px;padding:0 3px 0 6px;}
+.jswindow.plain{background:white;border-top-left-radius:7px 7px;border-top-right-radius:7px 7px;}.jswindow.plain .window-top p.window-title{background:#1e90ff;color:white;}
 .jswindow.plain .window-top .close-window-button b{font-size:.8em;}
 .jswindow.plain .window-top .close-window-button:hover{background:#0000ff;}
 .jswindow.plain .window-top .close-window-button:active{background:#0000ff;}
