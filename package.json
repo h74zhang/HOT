@@ -26,7 +26,8 @@
     "passport-google-oauth": "*",
     "passport-local": "*",
     "passport-twitter": "*",
-    "jsonfile": "*"
+    "jsonfile": "*",
+    "redis": "*"
   },
   "engines": {
     "node": "0.10.x"
