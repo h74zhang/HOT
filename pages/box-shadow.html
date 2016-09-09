@@ -12,8 +12,7 @@
         <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
         <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
         <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
-            
+
         <!-- CSS -->
         <link href="css/app.min.1.css" rel="stylesheet">
         <link href="css/app.min.2.css" rel="stylesheet">
@@ -33,15 +32,10 @@
                 vertical-align: middle;
                 position: relative;
             }
-            .btn-demo > .btn, .btn-group-demo > .btn-group {
-                margin: 0 5px 0px 0;
-                width: 100%;
-                font-weight: bold;
-            }
             .dropdown-basic-demo {
                 display: inline-block;
                 margin: 0 0px 20px 0;
-                width: 150px;
+                width: 100px;
             }
             .dropdown-menu {
               position: absolute;
@@ -50,7 +44,7 @@
               z-index: 9;
               display: none;
               float: left;
-              min-width: 130px;
+              min-width: 80px;
               padding: 5px 0;
               margin: 2px 0 0;
               list-style: none;
@@ -63,6 +57,7 @@
               box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
               background-clip: padding-box;
             }
+
             .dropdown-basic-demo .dropdown-menu {
                 display: block;
                 position: relative;
@@ -70,7 +65,23 @@
                 opacity: 1;
                 filter: alpha(opacity=1);
                 z-index: 0;
-                width: 150px;
+                width: 100px;
+            }
+
+            .btn-colors > .btn {
+                min-width: 112px;
+            }
+            
+            .btn-demo > .btn, .btn-group-demo > .btn-group {
+                margin: 0 5px 10px 0;
+            }
+            .btn-icon-local {
+              border-radius: 50%;
+              width: 34px;
+              height: 34px;
+              padding: 0;
+              text-align: center;
+              position: relative;
             }
         </style>
     </head>
@@ -608,83 +619,142 @@
                             <h2>Test ENV #2046</h2>
                         </div>
                         
+                            <div class="dropdown-basic-demo clearfix">
+                                <ul class="dropdown-menu" role="menu">
 
-                            
-                            <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-indigo" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Journal Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Statistic</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Log Type</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">CCP VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CCP VM</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CELL VM</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UE 1 VM</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UE 2 VM</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">OAM VM</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">RAP</a></li>
+                                    
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-blue" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Journal Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Statistic</a></li>
+                                <ul class="dropdown-menu" role="menu">
+
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Journal Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">CELL VM</a></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-teal" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Journal Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Statistic</a></li>
+                                <ul class="dropdown-menu" role="menu">
+                                    
+                                    
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">App Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">OAM VM</a></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-orange" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Journal Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Statistic</a></li>
+                                <ul class="dropdown-menu" role="menu">
+                                    
+                                    
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">CP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">UE VM 1</a></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-bluegray" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Journal Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Statistic</a></li>
+                                <ul class="dropdown-menu" role="menu">
+                                    
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">UP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">UE VM 2</a></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
-                                <ul class="dropdown-menu bgm-green" role="menu">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">BTSLOG</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">App Log</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">TTI Trace</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UP packet</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Msg Seq</a></li>
+                                <ul class="dropdown-menu" role="menu">
+                                    
+                                    
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Msg Seq</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">RAP</a></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="dropdown-basic-demo clearfix">
+                                <ul class="dropdown-menu" role="menu">
+                                    
+                                    
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Status</a></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
+                                    <li class="divider"></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="-1"><i class="md md-visibility"></i></button></li>
                                 </ul>
                             </div>
 

@@ -24,6 +24,18 @@ $(document).ready(function(){
         });
     };
 
+    $(':button').on('click', function(){
+        var btn=$(this);
+        console.log(btn.attr());
+        if(btn.attr('class')=='btn btn-success btn-icon'){
+             btn.removeClass('btn btn-success btn-icon').addClass('btn-danger');
+        }
+        else{
+            btn.removeClass('btn-danger').addClass('btn btn-success btn-icon');
+        }
+
+    })
+
     $.get("/username", function(result){
         $('#Active_User span').text(result);
         if (!$('.login-content')[0]) {

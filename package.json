@@ -6,7 +6,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:fabiobozzo/expressjs-multiauth.git"
+    "url": "git@github.com/h74zhang/HOT.git"
   },
   "dependencies": {
     "bcrypt": "*",
@@ -25,7 +25,8 @@
     "passport-facebook": "*",
     "passport-google-oauth": "*",
     "passport-local": "*",
-    "passport-twitter": "*"
+    "passport-twitter": "*",
+    "jsonfile": "*"
   },
   "engines": {
     "node": "0.10.x"

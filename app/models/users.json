@@ -1,7 +1,1 @@
-[
-    { "_id": "deac2095-c5cc-4eed-be35-0f487dc29e0e",
-      "fullName": "test",
-      "email": "test@test.com",
-      "local": { "password": "$2a$08$CXxSWbd/UmM8C1mu0ba.Su.SXbYWaMQHW5ZLfWJ/hQssU5uXMNDVW" } 
-    }
-]
+[{"_id":"770ae8ad-9ca6-4934-b0d0-b18792d77330","fullName":"admin","email":"admin@admin.com","local":{"password":"$2a$08$XkYGmmoTuJDf.DCZZjj25eWSqeTO8Mxsrj2qvSMyK0jTJPOVpFZGq"}},{"_id":"dff0d12a-0fca-4040-9ce5-77fa2426b6e1","fullName":"test","email":"test@test.com","local":{"password":"$2a$08$ms9vfzsXXypkAilk7cWeE.jja9Cr0YUYF9JxxwQILAH6WZo8olxKi"}}]
