@@ -138,14 +138,14 @@ jsWindow.windowGroup = function (container, additionalGroupSettings) {
     var groupSettings = {
         start_z_index: 100,
         keep_windows_on_page: {top: true, bottom: false, left: false, right: false},
-        transparent_when_moving: false,
+        transparent_when_moving: true,
         transparent_when_resizing: true,
         id: jsWindow.generate_id(jsWindow.groups, "groupID"),
         theme: "plain",
         shadow: false,
         min_height: 100,
         min_width: 150,
-        fixed_position: false
+        fixed_position: true
     };
     if (!additionalGroupSettings === undefined) {
         jsWindow.update_with(groupSettings.keep_windows_on_page, additionalGroupSettings.keep_windows_on_page);
