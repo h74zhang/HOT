@@ -56,7 +56,9 @@ $(document).ready(function() {
 
                 $.get("/journal", {vm_name: win_title[my_index], log_id:log_index[my_index]}, function(result){
                     console.log(result.length);
-                    log_index[my_index] = result.length;
+                    if(result.length != 0) {
+                        log_index[my_index] += result.length;
+                    }
                 });
             }
         });

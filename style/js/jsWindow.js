@@ -177,7 +177,6 @@ jsWindow.windowGroup = function (container, additionalGroupSettings) {
         var objDiv = document.getElementById(win_id);
         if ((win) && (objDiv)) {
             var cont_cont = win.children(".window-content-container");
-            text_content = text_content+"</br>";
             cont_cont.children(".window-content").append(text_content);
 
             var tempid = "wincon"+win_id;
