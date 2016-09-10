@@ -48,6 +48,16 @@ $(document).ready(function() {
             };
         }
     });
+    
+    $(document).on("mouseup.close-window",".close-window-button", change_btn);
+
+    function change_btn(e) {
+        var win = $(this).parent().parent();
+        //console.log(Object.getOwnPropertyNames(win));
+        btn = $('button[tabindex="'+WindowId.indexOf(win.attr('id'))+'"]');
+        btn.removeClass("btn-danger");
+        btn.addClass("btn-success");
+    }
 
     setInterval(function() {
         WindowId.forEach(function(my_win_id) {
