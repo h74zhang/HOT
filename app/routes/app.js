@@ -17,15 +17,17 @@ module.exports = function(app) {
 		res.render('index', { title: 'Congrats!' });
 	});
 
-	app.get('/test', function(req, res){
-		redis_client.lindex("logstash-redis", 1, function(err, ret) {
-		redis_client.debug_mode = true;
-		res.json(ret);
+	app.get('/journal', function(req, res){
+		var result_arr=[];
+		redis_client.lrange(req.query.vm_name, req.query.log_id, -1, function(err, ret) {
+			redis_client.debug_mode = true;
+			ret.forEach(function(e) {
+				result_arr.push(JSON.parse(e));
+			});
+			res.json(result_arr);
 		});
-
-		res.json({ name: 'zoe' });
 	});
-
+		
 	app.get('/username', function(req, res){
 		res.send(User.latest());
 	});

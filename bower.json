@@ -4,6 +4,7 @@
   "dependencies": {
     "modernizr": "",
     "bootstrap": "",
-    "underscore" : ""
+    "underscore": "",
+    "redis": ""
   }
 }
