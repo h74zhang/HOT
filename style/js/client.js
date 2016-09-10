@@ -17,6 +17,7 @@ var log_index = [0,0,0,0,0,0];
 var win_top = [60,170,280,390,500,610];
 var win_left = 500;
 
+
 $(document).ready(function() {
     $("#env_list").find(':button').on('click', function(){
         var btn=$(this);
@@ -49,14 +50,22 @@ $(document).ready(function() {
         }
     });
 
-    setInterval(function() {
+   setInterval(function() {
         WindowId.forEach(function(my_win_id) {
             if(my_win_id != "0") {
                 my_index = WindowId.indexOf(my_win_id);
 
-                $.get("/journal", {vm_name: win_title[my_index], log_id:log_index[my_index]}, function(result){
-                    console.log(result.length);
+                $.get("/journal", {vm_name: win_title[my_index], log_id:log_index[my_index]})
+        .done(function(result){
+                    console.log(result);
                     if(result.length != 0) {
+
+                        var new_line = [];
+                        for(var i=0; i<result.length; i++){
+                            new_line[i] = result[i]["_hostname"] + " " + result[i]["@timestamp"] + " " + result[i]["message"] + "</br>";
+                        }
+
+                        wingroup.update_text(my_win_id,new_line);
                         log_index[my_index] += result.length;
                     }
                 });
@@ -64,5 +73,10 @@ $(document).ready(function() {
         });
     }, 5000);
 });
+
+
+
+
+
 
 
