@@ -163,10 +163,9 @@ var update_log = function() {
     var my_row = $(".container").attr("row");
     var my_log_id = (my_row+1)*(my_col+1);
     
-    console.log("We are in update_log");
-    
+
     $.get("/journal", {user_id: my_user_id, env_id: my_env_id, log_id: log_index[my_log_id]}).done(function(result){
-        console.log(result);
+
         if(result.length != 0) {
             if(my_log_id == 1) {
 
