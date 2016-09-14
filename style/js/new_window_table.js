@@ -165,7 +165,7 @@ var update_log = function() {
     
     console.log("We are in update_log");
     
-    $.get("/journal", {user_id: my_user_id, env_id: my_env_id, log_id: my_log_id}).done(function(result){
+    $.get("/journal", {user_id: my_user_id, env_id: my_env_id, log_id: log_index[my_log_id]}).done(function(result){
         console.log(result);
         if(result.length != 0) {
             if(my_log_id == 1) {

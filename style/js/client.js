@@ -23,9 +23,9 @@ $(document).ready(function() {
         var column = a.attr("col");
         var row = a.attr("tabindex");
 
-        if(win_available[row][column] == false) {
-            a.removeClass("btn-success");
-            a.addClass("btn-default");
+        if(win_available[row][column] == true) {
+            a.removeClass("btn-default");
+            a.addClass("btn-success");
         }
     });
 
