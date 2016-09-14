@@ -103,6 +103,8 @@ var onSearch = function() {
 
 search.oninput = onSearch;
 
+
+/*
 var now = new Date();
 var new_line = "abcdefghijklmndfdfdfdfdfd [WRN]  "+now.toISOString();
 
@@ -124,8 +126,9 @@ for(var i = 0; i < new_rows.length; i++) {
 }
 clusterize.append(filterRows(new_rows));
 document.getElementById('scrollArea').scrollTop += 500;
+*/
 
-
+/*
 var counter = 0;
 setInterval(function() {
     var now = new Date();
@@ -147,5 +150,51 @@ setInterval(function() {
     counter++;
     document.getElementById('scrollArea').scrollTop = document.getElementById('scrollArea').scrollHeight;
 }, 5000);
+*/
+
+var myTimer;
+var log_index = [0,0,0,0,0,0,0,0,0,0,0,0];
+
+var update_log = function() {
+    var my_user_id = $(".container").attr("user_id");
+    var my_env_id = $(".container").attr("env_id");
+    var my_col = $(".container").attr("col");
+    var my_row = $(".container").attr("row");
+    var my_log_id = (my_row+1)*(my_col+1);
+
+
+    $.get("/journal", {user_id: my_user_id, env_id: my_env_id, log_id: my_log_id}).done(function(result){
+        console.log(result);
+        if(result.length != 0) {
+            if(my_log_id == 1) {
+
+                var new_line = [];
+
+                for(var i=0; i<result.length; i++){
+                    new_line[i] = result[i]["_hostname"] + " " + result[i]["@timestamp"] + " " + result[i]["message"] + "</br>";
+                }
+
+                var new_rows = construct_rows(new_line);
+
+                for(var i = 0; i < new_rows.length; i++) {
+                    rows.push(new_rows[i]);
+                }
+
+                clusterize.append(filterRows(new_rows));
+                document.getElementById('scrollArea').scrollTop = document.getElementById('scrollArea').scrollHeight;
+                log_index[my_log_id] += result.length;
+            }
+        }
+    });
+
+    myTimer = setTimeout(update_log, 100);
+}
+
+
+$(document).ready(function() {
+    myTimer = setTimeout(update_log, 100);
+});
+
+//clearTimeout(myVar);
 
 
