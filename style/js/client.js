@@ -2,31 +2,41 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-var WindowId = [["0","0","0","0","0","0"],
-                ["0","0","0","0","0","0"]];
-
 var user_id = "test";
 var env_id = "1234";
 
 var win_title = [["VM-Journal","VM-AppLog","VM-CP","VM-UP","VM-MSGSeq","VM-Status"],
                 ["RAP-BTSLOG","RAP-TTITRACE","RAP-CP","RAP-UP","RAP-MSGSeq","RAP-Status"]];
 
+var win_available = [[true,false,false,false,false,false],
+                    [false,false,false,false,false,false]];
+
 var win_top = [60,170,280,390,500,610];
 var win_left = 500;
+var increment = 0;
 
 
 $(document).ready(function() {
+
+    $("#env_list").find(':button').each(function(btn) {
+        var a = $(this);
+        var column = a.attr("col");
+        var row = a.attr("tabindex");
+
+        if(win_available[row][column] == false) {
+            a.removeClass("btn-success");
+            a.addClass("btn-default");
+        }
+    });
+
     $("#env_list").find(':button').on('click', function(){
         var btn=$(this);
         if(btn.hasClass("btn-success")) {
-            btn.removeClass("btn-success");
-            btn.addClass("btn-danger");
 
             var column = btn.attr("col");
             var row = btn.attr("tabindex");
 
-            my_win = window.open("",win_title[row][column],'location=no,status=no, toolbar=no, menubar=no, scrollbar=no, resizable=no, top=100,left=200,width=500, height=400');
-            WindowId[row][column] = my_win;
+            var my_win = window.open("","",'location=no,status=no, toolbar=no, menubar=no, scrollbar=no, resizable=no, top=100,left=200,width=500, height=400');
             window.focus();
 
             my_win.document.write('<title>'+win_title[row][column]+'</title>');
@@ -55,18 +65,12 @@ $(document).ready(function() {
 
             my_win.document.write('<script src="./js/new_window_table.js"></script>');
             //my_win.location = "#";
+            /*
             my_win.onunload = function(){
                 console.log("We are in unload cb",btn.attr("col"),btn.attr("tabindex"));
                 btn.removeClass("btn-danger");
                 btn.addClass("btn-success");
-            }
-        } else {
-            btn.removeClass("btn-danger");
-            btn.addClass("btn-success");
-            var column = btn.attr("col");
-            var row = btn.attr("tabindex");
-
-            WindowId[row][column].close();
+            */
         }
     });
 });
