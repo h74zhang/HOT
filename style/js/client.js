@@ -64,7 +64,7 @@ $(document).ready(function() {
             my_win.document.write('</div>');
 
             my_win.document.write('<script src="./js/new_window_table.js"></script>');
-            //my_win.location = "#";
+            my_win.location = "#";
             /*
             my_win.onunload = function(){
                 console.log("We are in unload cb",btn.attr("col"),btn.attr("tabindex"));

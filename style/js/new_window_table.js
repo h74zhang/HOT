@@ -152,17 +152,19 @@ setInterval(function() {
 }, 5000);
 */
 
-var myTimer;
+
 var log_index = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 var update_log = function() {
+    
     var my_user_id = $(".container").attr("user_id");
     var my_env_id = $(".container").attr("env_id");
     var my_col = $(".container").attr("col");
     var my_row = $(".container").attr("row");
     var my_log_id = (my_row+1)*(my_col+1);
-
-
+    
+    console.log("We are in update_log");
+    
     $.get("/journal", {user_id: my_user_id, env_id: my_env_id, log_id: my_log_id}).done(function(result){
         console.log(result);
         if(result.length != 0) {
@@ -186,15 +188,8 @@ var update_log = function() {
             }
         }
     });
+};
+setInterval(update_log,1000);
 
-    myTimer = setTimeout(update_log, 100);
-}
-
-
-$(document).ready(function() {
-    myTimer = setTimeout(update_log, 100);
-});
-
-//clearTimeout(myVar);
 
 
