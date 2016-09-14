@@ -16,7 +16,6 @@
         <!-- CSS -->
         <link href="css/app.min.1.css" rel="stylesheet">
         <link href="css/app.min.2.css" rel="stylesheet">
-        <link href='css/jsWindow_style.css' rel='stylesheet' type='text/css'/>
         <!-- Following CSS codes are used only fore demo purposes thus you can remove anytime -->
         <style type="text/css">
             .bs-item {
@@ -627,8 +626,8 @@
 
             <section id="content">
                 <div class="container" id="env_list">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card" id="env_list_entry">
+                        <div class="card-header" id="env_list_entry_header">
                             <h2>Test ENV #2046</h2>
                         </div>
                         
@@ -637,17 +636,9 @@
 
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Log Type</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="0" href="#">CCP VM</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="0" href="#">VM</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="1" href="#">CELL VM</a></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="2" href="#">UE 1 VM</a></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="3" href="#">UE 2 VM</a></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="4" href="#">OAM VM</a></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="5" href="#">RAP</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="1" href="#">RAP</a></li>
                                     
                                 </ul>
                             </div>
@@ -657,37 +648,22 @@
 
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700" >Journal Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="1"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="0"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="1"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="1"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="1"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="1"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="1"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="0"></button></li>
+
                                 </ul>
                             </div>
                             
                             <div class="dropdown-basic-demo clearfix">
                                 <ul class="dropdown-menu" role="menu">
                                     
-                                    
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">App Log</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="2"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="1"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="2"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="2"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="2"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="2"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="2"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="1"></button></li>
+
                                 </ul>
                             </div>
                             
@@ -697,17 +673,10 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">CP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="3"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="2"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="3"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="3"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="3"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="3"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="3"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="2"></button></li>
+
                                 </ul>
                             </div>
                             
@@ -716,17 +685,10 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">UP Packet</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="4"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="3"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="4"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="4"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="4"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="4"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="4"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="3"></button></li>
+
                                 </ul>
                             </div>
                             
@@ -736,17 +698,10 @@
                                     
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Msg Seq</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="5"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="4"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="5"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="5"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="5"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="5"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="5"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="4"></button></li>
+
                                 </ul>
                             </div>
 
@@ -754,89 +709,13 @@
                             <div class="dropdown-basic-demo clearfix">
                                 <ul class="dropdown-menu" role="menu">
                                     
-                                    
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="f-700">Status</a></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="6"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="0" col="5"></button></li>
                                     <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="6"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="2" col="6"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="3" col="6"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="4" col="6"></button></li>
-                                    <li class="divider"></li>
-                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="5" col="6"></button></li>
+                                    <li role="presentation"><button class="btn btn-success btn-icon-local" tabindex="1" col="5"></button></li>
                                 </ul>
                             </div>
-
-
-
-                        <!--[if true]>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>CCP VM</th>
-                                        <th>CELL VM</th>
-                                        <th>UE VM</th>
-                                        <th>OAM VM</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="info">
-                                        <td>
-                                            <div class="bs-item">
-                                            <div class="btn-colors btn-demo"> 
-                                                <button class="btn bgm-cyan" id="ENV_2046_CCP_VM_Journal">Journal Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CCP_VM_App">APP Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CCP_VM_Cp">CP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CCP_VM_Up">UP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CCP_VM_Msg">MSG SEQ</button>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="bs-item">
-                                            <div class="btn-colors btn-demo"> 
-                                                <button class="btn bgm-cyan" id="ENV_2046_CELL_VM_Journal">Journal Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CELL_VM_App">APP Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CELL_VM_Cp">CP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CELL_VM_Up">UP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_CELL_VM_Msg">MSG SEQ</button>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="bs-item">
-                                            <div class="btn-colors btn-demo"> 
-                                                <button class="btn bgm-cyan" id="ENV_2046_UE_VM_Journal">Journal Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_UE_VM_App">APP Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_UE_VM_Cp">CP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_UE_VM_Up">UP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_UE_VM_Msg">MSG SEQ</button>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="bs-item">
-                                            <div class="btn-colors btn-demo"> 
-                                                <button class="btn bgm-cyan" id="ENV_2046_OAM_VM_Journal">Journal Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_OAM_VM_App">APP Log</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_OAM_VM_Cp">CP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_OAM_VM_Up">UP packet</button></br>
-                                                <button class="btn bgm-cyan" id="ENV_2046_OAM_VM_Msg">MSG SEQ</button>
-                                            </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <![endif]-->
-
-
                     </div>
                 </div>
             </section>
@@ -895,7 +774,6 @@
         
         <script src="js/functions.js"></script>
         <script src="js/demo.js"></script>
-        <script src='js/jsWindow.js'></script>
         <script src='js/client.js'></script>
 
     </body>
