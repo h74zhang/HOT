@@ -74,21 +74,6 @@ $(document).ready(function() {
         }
     });
 
-    setInterval(function() {
-        WindowId.forEach(function(my_win_id) {
-            if(my_win_id != "0") {
-                my_index = WindowId.indexOf(my_win_id);
-
-                $.get("/journal", {vm_name: win_title[my_index], log_id:log_index[my_index]})
-		.done(function(result){
-                    console.log(result);
-                    if(result.length != 0) {
-                        log_index[my_index] += result.length;
-                    }
-                });
-            }
-        });
-    }, 5000);
 });
 
 
