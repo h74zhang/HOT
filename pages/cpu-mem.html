@@ -332,8 +332,8 @@
                             <li class="sub-menu active toggled">
                                 <a href="#"><i class="md md-trending-up"></i>VM Status</a>
                                 <ul>
-                                    <li><a class="active" href="bandwidth.html">Bandwidth</a></li>
-                                    <li><a href="cpu-mem.html">Cpu and Mem</a></li>
+                                    <li><a class="active" href="flot-charts.html">Bandwidth</a></li>
+                                    <li><a href="#">Cpu and Mem</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -525,7 +525,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam TX</h2>
+                                                    <h2>CPULOAD</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -538,7 +538,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam RX</h2>
+                                                    <h2>MEMORY</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -548,82 +548,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
 
 
@@ -639,7 +564,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam TX</h2>
+                                                    <h2>CPULOAD</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -652,7 +577,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam RX</h2>
+                                                    <h2>MEMORY</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -662,82 +587,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
 
 
@@ -750,7 +600,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam TX</h2>
+                                                    <h2>CPULOAD</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -763,7 +613,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam RX</h2>
+                                                    <h2>MEMORY</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -773,82 +623,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                        
 
 
                                     </div>
@@ -863,7 +638,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam TX</h2>
+                                                    <h2>CPULOAD</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -876,7 +651,7 @@
                                         <div class="col-md-6">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h2>Bandwidth oam RX</h2>
+                                                    <h2>MEMORY</h2>
                                                 </div>
                                                 
                                                 <div class="card-body card-padding-sm">
@@ -886,81 +661,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal_srv RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth internal RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management TX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h2>Bandwidth management RX</h2>
-                                                </div>
-                                                
-                                                <div class="card-body card-padding-sm">
-                                                    <div id="dynamic-chart" class="flot-chart"></div>
-                                                    <div class="flc-dynamic"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
 
                                 </div>

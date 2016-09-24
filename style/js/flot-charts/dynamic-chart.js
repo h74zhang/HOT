@@ -1,11 +1,11 @@
 $(document).ready(function(){
     
     /* Make some random data*/
-    
     var data = [];
     var totalPoints = 300;
-    var updateInterval = 30;
-    
+    var updateInterval = 100;
+    var x_value = 0;
+
     function getRandomData() {
         if (data.length > 0)
             data = data.slice(1);
@@ -16,27 +16,33 @@ $(document).ready(function(){
                 y = prev + Math.random() * 10 - 5;
             if (y < 0) {
                 y = 0;
-            } else if (y > 90) {
-                y = 90;
-            }
+            } 
 
             data.push(y);
         }
 
         var res = [];
         for (var i = 0; i < data.length; ++i) {
-            res.push([i, data[i]])
+            res.push([x_value+i, data[i]])
         }
 
         return res;
     }
 
+    function suffixFormatter(val, axis) {
+        if (val > 1000000)
+            return (val / 1000000).toFixed(axis.tickDecimals) + " MB";
+        else if (val > 1000)
+            return (val / 1000).toFixed(axis.tickDecimals) + " kB";
+        else
+            return val.toFixed(axis.tickDecimals) + " B";
+    }
+
     /* Create Chart */
-    
     if ($('#dynamic-chart')[0]) {
         var plot = $.plot("#dynamic-chart", [ getRandomData() ], {
             series: {
-                label: "Server Process Data",
+                label: "Bandwidth",
                 lines: {
                     show: true,
                     lineWidth: 0.2,
@@ -48,7 +54,7 @@ $(document).ready(function(){
             },
             yaxis: {
                 min: 0,
-                max: 100,
+
                 tickColor: '#eee',
                 font :{
                     lineHeight: 13,
@@ -56,11 +62,11 @@ $(document).ready(function(){
                     color: "#9f9f9f",
                 },
                 shadowSize: 0,
-    
+                tickFormatter: suffixFormatter,
             },
             xaxis: {
                 tickColor: '#eee',
-                show: true,
+                show: false,
                 font :{
                     lineHeight: 13,
                     style: "normal",
@@ -68,7 +74,6 @@ $(document).ready(function(){
                 },
                 shadowSize: 0,
                 min: 0,
-                max: 250
             },
             grid: {
                 borderWidth: 1,
@@ -87,12 +92,11 @@ $(document).ready(function(){
             }
         });
     }
-        
+
     /* Update */    
     function update() {
         plot.setData([getRandomData()]);
-        // Since the axes don't change, we don't need to call plot.setupGrid()
-
+        plot.setupGrid();
         plot.draw();
         setTimeout(update, updateInterval);
     }
